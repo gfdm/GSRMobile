@@ -1,0 +1,2 @@
+# GSRMobile
+GITADORA SKILL RECORDER Mobile project
