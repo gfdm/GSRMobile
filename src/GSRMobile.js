@@ -1,46 +1,55 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
-  AppRegistry,
   StyleSheet,
-  Text,
-  View
+  View,
+  Text
 } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 
-class GSRMobile extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          GSRMobile
-        </Text>
-        <Text style={styles.instructions}>
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
-    );
+import GSRRouter from './router';
+import GSRStatusBar from './components/statusbar';
+import GSRTabbar from './components/tabbar.js';
+
+export default class GSRMobile extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      authFlag: false
+    };
   }
-}
+  doLogin() {
+    this.setState({
+      authFlag: !this.state.authFlag
+    });
+  }
+  render() {
+    let statusBar = null;
+    if (this.state.authFlag) {
+      return (
+        <View style={styles.container}>
+          <GSRStatusBar />
+          <GSRRouter />
+          <GSRTabbar />
+        </View>
+      );
+    } else {
+      return (
+        <View style={styles.index}>
+          <GSRStatusBar />
+          <Text onPress={() => {this.doLogin()}}>go Home!</Text>
+        </View>
+      );
+    }
+  }
+};
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1
+  },
+  index: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+    justifyContent: 'center'
+  }
 });
-
-module.exports = GSRMobile;
