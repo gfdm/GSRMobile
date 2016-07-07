@@ -75,9 +75,10 @@ export default class GSRRouter extends React.Component {
 
 const styles = StyleSheet.create({
   navigationBarStyle: {
-    backgroundColor: "#514E64"
+    borderBottomColor: '#CCC',
+    backgroundColor: "#FFF"
   },
   titleStyle: {
-    color: "#FFF"
+    color: "#333"
   }
 });

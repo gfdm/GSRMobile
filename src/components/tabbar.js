@@ -52,11 +52,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   cell: {
-    flex: 1,
     height: 50,
-    flexDirection: 'row',
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#CCC'
+    backgroundColor: '#FFF'
   }
 });
