@@ -17,56 +17,79 @@ export default class GSRRouter extends React.Component {
         navigationBarStyle: styles.navigationBarStyle,
         titleStyle: styles.titleStyle,
         duration: 1
-      }
+      },
+      scenes: [
+        {
+          key: 'main',
+          initial: true,
+          scenes: [
+            {
+              key: 'main_home',
+              initial: true,
+              title: '首页',
+              component: Home
+            }
+          ]
+        },
+        {
+          key: 'record',
+          scenes: [
+            {
+              key: 'record_home',
+              initial: true,
+              title: '记录',
+              component: Record
+            }
+          ]
+        },
+        {
+          key: 'list',
+          scenes: [
+            {
+              key: 'list_home',
+              initial: true,
+              title: '曲单',
+              component: List
+            }
+          ]
+        },
+        {
+          key: 'profile',
+          scenes: [
+            {
+              key: 'profile_home',
+              initial: true,
+              title: '信息',
+              component: Profile
+            }
+          ]
+        },
+      ]
     };
     return (
       <Router>
         <Scene key="root">
-          <Scene
-            key="main"
-            initial={true}
-            {...CONFIG.common}
-          >
-            <Scene
-              key="main_home"
-              component={Home}
-              title="首页"
-              initial={true}
-             />
-          </Scene>
-          <Scene
-            key="record"
-            {...CONFIG.common}
-          >
-            <Scene
-              key="record_home"
-              component={Record}
-              title="记录"
-              initial={true}
-            />
-          </Scene>
-          <Scene
-            key="list"
-            {...CONFIG.common}
-          >
-            <Scene
-              key="list_home"
-              component={List}
-              title="曲单"
-              initial={true}
-            />
-          </Scene>
-          <Scene
-            key="profile"
-            {...CONFIG.common}
-          >
-            <Scene
-              key="profile_home"
-              component={Profile}
-              title="信息"
-              initial={true}
-            />
-          </Scene>
+          {
+            CONFIG.scenes.map((scene, index) => {
+              return (
+                <Scene
+                  key={scene.key}
+                  initial={scene.initial}
+                  {...CONFIG.common}
+                >
+                  {
+                    scene.scenes.map((scene, index) => {
+                      return (
+                        <Scene
+                          {...scene}
+                         />
+                      );
+                    })
+                  }
+                </Scene>
+              );
+            })
+          }
         </Scene>
       </Router>
     );

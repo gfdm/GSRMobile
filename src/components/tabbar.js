@@ -59,7 +59,7 @@ export default class GSRTabbar extends React.Component {
                     <Text style={styles.text}>{tab.name}</Text>
                   </View>
                 </TouchableHighlight>
-              )
+              );
           })
         }
       </View>
