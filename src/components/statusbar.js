@@ -7,7 +7,7 @@ export default class GSRStatusBar extends React.Component {
   render() {
     return (
       <StatusBar
-       backgroundColor="#CCC"
+        {...this.props}
       />
     );
   }
