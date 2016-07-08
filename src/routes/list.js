@@ -35,6 +35,42 @@ export default class List extends React.Component {
             <Text style={styles.pickerIcon}>▼</Text>
           </View>
         </TouchableOpacity>
+        <View>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+          <Text>Test</Text>
+        </View>
         <View style={this.state.picker ? styles.options : {width: 0, height: 0}}>
           <TouchableOpacity
             style={styles.option}
@@ -97,42 +133,6 @@ export default class List extends React.Component {
             <Text value="v5">GuitarFreak & Drumania V5</Text>
           </TouchableOpacity>
         </View>
-        <View>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-        </View>
       </ScrollView>
     );
   }
@@ -163,6 +163,11 @@ const styles = StyleSheet.create({
     fontSize: 10
   },
   options: {
+    position: 'absolute',
+    top: 44,
+    right: 0,
+    borderWidth: 0.5,
+    borderColor: '#CCC',
     backgroundColor: 'rgba(255, 255, 255, 0.9)'
   },
   option: {
