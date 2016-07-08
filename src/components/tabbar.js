@@ -15,35 +15,6 @@ import profileIcon from '../images/person.png';
 
 export default class GSRTabbar extends React.Component {
   render() {
-    const CONFIG = {
-      touchableHighlight: {
-        style: styles.cell,
-        underlayColor: '#DDD'
-      },
-      tabs: [
-        {
-          name: '首页',
-          icon: homeIcon,
-          onPress: 'main'
-        },
-        {
-          name: '记录',
-          icon: recordIcon,
-          onPress: 'record'
-        },
-        {
-          name: '曲单',
-          icon: listIcon,
-          onPress: 'list'
-        },
-        {
-          name: '信息',
-          icon: profileIcon,
-          onPress: 'profile'
-        },
-      ]
-    };
-
     return (
       <View style={styles.container}>
         {
@@ -94,3 +65,32 @@ const styles = StyleSheet.create({
     fontSize: 12
   }
 });
+
+const CONFIG = {
+  touchableHighlight: {
+    style: styles.cell,
+    underlayColor: '#DDD'
+  },
+  tabs: [
+    {
+      name: '首页',
+      icon: homeIcon,
+      onPress: 'main'
+    },
+    {
+      name: '记录',
+      icon: recordIcon,
+      onPress: 'record'
+    },
+    {
+      name: '曲单',
+      icon: listIcon,
+      onPress: 'list'
+    },
+    {
+      name: '信息',
+      icon: profileIcon,
+      onPress: 'profile'
+    },
+  ]
+};

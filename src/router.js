@@ -12,60 +12,6 @@ import Record from './routes/record';
 
 export default class GSRRouter extends React.Component {
   render() {
-    const CONFIG = {
-      common: {
-        navigationBarStyle: styles.navigationBarStyle,
-        titleStyle: styles.titleStyle,
-        duration: 1
-      },
-      scenes: [
-        {
-          key: 'main',
-          initial: true,
-          scenes: [
-            {
-              key: 'main_home',
-              initial: true,
-              title: '首页',
-              component: Home
-            }
-          ]
-        },
-        {
-          key: 'record',
-          scenes: [
-            {
-              key: 'record_home',
-              initial: true,
-              title: '记录',
-              component: Record
-            }
-          ]
-        },
-        {
-          key: 'list',
-          scenes: [
-            {
-              key: 'list_home',
-              initial: true,
-              title: '曲单',
-              component: List
-            }
-          ]
-        },
-        {
-          key: 'profile',
-          scenes: [
-            {
-              key: 'profile_home',
-              initial: true,
-              title: '信息',
-              component: Profile
-            }
-          ]
-        },
-      ]
-    };
     return (
       <Router>
         <Scene key="root">
@@ -105,3 +51,58 @@ const styles = StyleSheet.create({
     color: "#333"
   }
 });
+
+const CONFIG = {
+  common: {
+    navigationBarStyle: styles.navigationBarStyle,
+    titleStyle: styles.titleStyle,
+    duration: 1
+  },
+  scenes: [
+    {
+      key: 'main',
+      initial: true,
+      scenes: [
+        {
+          key: 'main_home',
+          initial: true,
+          title: '首页',
+          component: Home
+        }
+      ]
+    },
+    {
+      key: 'record',
+      scenes: [
+        {
+          key: 'record_home',
+          initial: true,
+          title: '记录',
+          component: Record
+        }
+      ]
+    },
+    {
+      key: 'list',
+      scenes: [
+        {
+          key: 'list_home',
+          initial: true,
+          title: '曲单',
+          component: List,
+        }
+      ]
+    },
+    {
+      key: 'profile',
+      scenes: [
+        {
+          key: 'profile_home',
+          initial: true,
+          title: '信息',
+          component: Profile
+        }
+      ]
+    },
+  ]
+};
