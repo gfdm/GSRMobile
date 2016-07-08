@@ -30,7 +30,7 @@ export default class GSRRouter extends React.Component {
             <Scene
               key="main_home"
               component={Home}
-              title="Home"
+              title="首页"
               initial={true}
              />
           </Scene>
@@ -41,7 +41,7 @@ export default class GSRRouter extends React.Component {
             <Scene
               key="record_home"
               component={Record}
-              title="Record"
+              title="记录"
               initial={true}
             />
           </Scene>
@@ -52,7 +52,7 @@ export default class GSRRouter extends React.Component {
             <Scene
               key="list_home"
               component={List}
-              title="List"
+              title="曲单"
               initial={true}
             />
           </Scene>
@@ -63,7 +63,7 @@ export default class GSRRouter extends React.Component {
             <Scene
               key="profile_home"
               component={Profile}
-              title="Profile"
+              title="信息"
               initial={true}
             />
           </Scene>

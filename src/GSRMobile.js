@@ -17,7 +17,7 @@ export default class GSRMobile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      authFlag: true
+      authFlag: false
     };
   }
   doLogin(authFlag) {
@@ -27,7 +27,6 @@ export default class GSRMobile extends React.Component {
   }
   render() {
     if (!this.state.authFlag) {
-      // Login Page
       return (
         <View style={styles.index}>
           <Image style={styles.index} source={require('./images/bg.png')}>
@@ -37,7 +36,6 @@ export default class GSRMobile extends React.Component {
         </View>
       );
     } else {
-      // Inner Page
       return (
         <View style={styles.container}>
           <GSRStatusBar backgroundColor="#CCC" />

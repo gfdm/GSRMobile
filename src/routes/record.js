@@ -1,27 +1,25 @@
 import React from 'react';
 import {
-  Text,
-  View
+  Platform,
+  StyleSheet,
+  ScrollView,
+  View,
+  Text
 } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 
 export default class Record extends React.Component {
   render() {
     return (
-      <View style={{marginTop: 50}}>
+      <ScrollView style={styles.container}>
         <Text>Record</Text>
-        <Text>Record</Text>
-        <Text>Record</Text>
-        <Text>Record</Text>
-        <Text>Record</Text>
-        <Text>Record</Text>
-        <Text>Record</Text>
-        <Text>Record</Text>
-        <Text>Record</Text>
-        <Text>Record</Text>
-        <Text>Record</Text>
-        <Text>Record</Text>
-      </View>
+      </ScrollView>
     );
   }
-}
+};
+
+const styles = StyleSheet.create({
+  container: {
+    marginTop: Platform.OS === 'android' ? 54 : 64
+  }
+});
