@@ -22,7 +22,7 @@ export default class GSRTabbar extends React.Component {
               return (
                 <TouchableHighlight
                   key={index}
-                  onPress={() => {Actions[tab.onPress]()}}
+                  onPress={() => {Actions[tab.onPress]({type: 'replace'})}}
                   {...CONFIG.touchableHighlight}
                 >
                   <View style={styles.tab}>

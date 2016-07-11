@@ -13,11 +13,13 @@ import GSRTabbar from './components/tabbar';
 
 import Index from './routes/index';
 
+import bg from './images/bg.png';
+
 export default class GSRMobile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      authFlag: false
+      authFlag: true
     };
   }
   doLogin(authFlag) {
@@ -29,7 +31,7 @@ export default class GSRMobile extends React.Component {
     if (!this.state.authFlag) {
       return (
         <View style={styles.index}>
-          <Image style={styles.index} source={require('./images/bg.png')}>
+          <Image style={styles.index} source={bg}>
             <GSRStatusBar />
             <Index authFlag={this.state.authFlag} authFlagCallback={this.doLogin.bind(this)} />
           </Image>

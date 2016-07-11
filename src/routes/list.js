@@ -36,102 +36,21 @@ export default class List extends React.Component {
           </View>
         </TouchableOpacity>
         <View>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
-          <Text>Test</Text>
         </View>
         <View style={this.state.picker ? styles.options : {width: 0, height: 0}}>
-          <TouchableOpacity
-            style={styles.option}
-            onPress={() => {this.showPicker('gdtb', 'GITADORA Tri-Boost')}}
-          >
-            <Text value="gdtb">GITADORA Tri-Boost</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.option}
-            onPress={() => {this.showPicker('gdod', 'GITADORA Overdrive')}}
-          >
-            <Text value="gdod">GITADORA Overdrive</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.option}
-            onPress={() => {this.showPicker('gd', 'GITADORA')}}
-          >
-            <Text value="gd">GITADORA</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.option}
-            onPress={() => {this.showPicker('xg3', 'GuitarFreak & Drumania XG3')}}
-          >
-            <Text value="xg3">GuitarFreak & Drumania XG3</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.option}
-            onPress={() => {this.showPicker('xg2', 'GuitarFreak & Drumania XG2')}}
-          >
-            <Text value="xg2">GuitarFreak & Drumania XG2</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.option}
-            onPress={() => {this.showPicker('xg', 'GuitarFreak & Drumania XG')}}
-          >
-            <Text value="xg">GuitarFreak & Drumania XG</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.option}
-            onPress={() => {this.showPicker('v8', 'GuitarFreak & Drumania V8')}}
-          >
-            <Text value="v8">GuitarFreak & Drumania V8</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.option}
-            onPress={() => {this.showPicker('v7', 'GuitarFreak & Drumania V7')}}
-          >
-            <Text value="v7">GuitarFreak & Drumania V7</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.option}
-            onPress={() => {this.showPicker('v6', 'GuitarFreak & Drumania V6')}}
-          >
-            <Text value="v6">GuitarFreak & Drumania V6</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.option}
-            onPress={() => {this.showPicker('v5', 'GuitarFreak & Drumania V5')}}
-          >
-            <Text value="v5">GuitarFreak & Drumania V5</Text>
-          </TouchableOpacity>
+          {
+            CONFIG.options.map((option, index) => {
+              return (
+                <TouchableOpacity
+                  key={index}
+                  style={styles.option}
+                  onPress={() => {this.showPicker(option.value, option.title)}}
+                >
+                  <Text value={option.value}>{option.title}</Text>
+                </TouchableOpacity>
+              );
+            })
+          }
         </View>
       </ScrollView>
     );
@@ -177,3 +96,48 @@ const styles = StyleSheet.create({
     paddingBottom: 10
   }
 });
+
+const CONFIG = {
+  options: [
+    {
+      title: 'GITADORA Tri-Boost',
+      value: 'gdtb'
+    },
+    {
+      title: 'GITADORA Overdrive',
+      value: 'gdod'
+    },
+    {
+      title: 'GITADORA',
+      value: 'gd'
+    },
+    {
+      title: 'GuitarFreak & Drumania XG3',
+      value: 'xg3'
+    },
+    {
+      title: 'GuitarFreak & Drumania XG2',
+      value: 'xg2'
+    },
+    {
+      title: 'GuitarFreak & Drumania XG',
+      value: 'xg'
+    },
+    {
+      title: 'GuitarFreak & Drumania V8',
+      value: 'v8'
+    },
+    {
+      title: 'GuitarFreak & Drumania V7',
+      value: 'v7'
+    },
+    {
+      title: 'GuitarFreak & Drumania V6',
+      value: 'v6'
+    },
+    {
+      title: 'GuitarFreak & Drumania V5',
+      value: 'v5'
+    },
+  ]
+};

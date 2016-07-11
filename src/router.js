@@ -7,8 +7,11 @@ import { Scene, Router } from 'react-native-router-flux';
 
 import Home from './routes/home';
 import List from './routes/list';
-import Profile from './routes/profile';
 import Record from './routes/record';
+import Profile from './routes/profile';
+import Setting from './routes/profile/setting.js';
+import Help from './routes/profile/help.js';
+import About from './routes/profile/about.js';
 
 export default class GSRRouter extends React.Component {
   render() {
@@ -101,7 +104,22 @@ const CONFIG = {
           initial: true,
           title: '信息',
           component: Profile
-        }
+        },
+        {
+          key: 'profile_setting',
+          title: '设置',
+          component: Setting
+        },
+        {
+          key: 'profile_help',
+          title: '帮助',
+          component: Help
+        },
+        {
+          key: 'profile_about',
+          title: '关于',
+          component: About
+        },
       ]
     },
   ]
