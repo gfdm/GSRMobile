@@ -7,6 +7,8 @@ import {
   Text
 } from 'react-native';
 
+import Storage from './storage';
+
 import GSRRouter from './router';
 import GSRStatusBar from './components/statusbar';
 import GSRTabbar from './components/tabbar';
@@ -19,8 +21,18 @@ export default class GSRMobile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      authFlag: true
+      authFlag: false
     };
+    Storage.load({
+      key: 'uid',
+      autoSync: true,
+      syncInBackground: true
+    }).then(data => {
+      this.setState({
+        authFlag: !!data.uid
+      });
+    }).catch(err => {
+    });
   }
   doLogin(authFlag) {
     this.setState({

@@ -35,8 +35,10 @@ export default class List extends React.Component {
             <Text style={styles.pickerIcon}>▼</Text>
           </View>
         </TouchableOpacity>
+        
         <View>
         </View>
+
         <View style={this.state.picker ? styles.options : {width: 0, height: 0}}>
           {
             CONFIG.options.map((option, index) => {

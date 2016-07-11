@@ -10,17 +10,47 @@ import {
 } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 
+import Storage from '../storage';
+import Fetch from '../fetch';
+
 import headerIcon from '../images/header.png';
 
 export default class Profile extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      uid: 0,
+      nickname: '',
+      email: ''
+    };
+    Storage.load({
+      key: 'uid',
+      autoSync: true,
+      syncInBackground: true
+    }).then(data => {
+      Fetch(
+        'http://gsr.asaki.me/api/account/getUserInfo/',
+        data.uid,
+        (data) => {
+          this.setState({
+            uid: data.uid,
+            nickname: data.nickname,
+            email: data.email
+          });
+        }
+      );
+    }).catch(err => {
+      console.warn(err);
+    });
+  }
   render() {
     return (
       <ScrollView style={styles.container}>
         <View style={styles.header}>
           <Image style={styles.headerLeft} source={headerIcon} />
           <View style={styles.headerRight}>
-            <Text style={styles.headerRightTitle}>测试测试帐号</Text>
-            <Text style={styles.headerRightSubtitle}>maxskill</Text>
+            <Text style={styles.headerRightTitle}>{this.state.nickname}</Text>
+            <Text style={styles.headerRightSubtitle}>{this.state.email}</Text>
           </View>
         </View>
 
@@ -59,7 +89,7 @@ const styles = StyleSheet.create({
   },
   header: {
     height: 70,
-    marginTop: 16,
+    marginTop: 4,
     backgroundColor: '#FFF',
     flexDirection: 'row',
     alignItems: 'center'

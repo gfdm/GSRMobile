@@ -1,25 +1,48 @@
 import React from 'react';
 import {
   StyleSheet,
+  TouchableOpacity,
   View,
   Image,
   TextInput,
   Text
 } from 'react-native';
 
+import Storage from '../storage';
+import Fetch from '../fetch';
+
 export default class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      authFlag: this.props.authFlag
+      authFlag: this.props.authFlag,
+      username: '',
+      password: ''
     };
   }
   doLogin() {
-    let authFlag = !this.state.authFlag;
-    this.setState({
-      authFlag: authFlag
-    });
-    this.props.authFlagCallback(authFlag);
+    Fetch(
+      'http://gsr.asaki.me/api/account/login',
+      {
+        username: this.state.username,
+        password: this.state.password
+      },
+      (data) => {
+        Storage.save({
+          key: 'uid',
+          rawData: {
+            uid: data.uid
+          },
+          expires: null
+        });
+        let authFlag = !this.state.authFlag;
+        this.setState({
+          authFlag: authFlag
+        });
+        this.props.authFlagCallback(authFlag);
+      },
+      'POST'
+    );
   }
   render() {
     const CONFIG = {
@@ -38,21 +61,24 @@ export default class Index extends React.Component {
         <View>
           <TextInput
             {...CONFIG.textInput}
+            onChangeText={(username) => this.setState({...this.state, username})}
+            value={this.state.username}
             placeholder="用户名"
           />
           <TextInput
             {...CONFIG.textInput}
+            onChangeText={(password) => this.setState({...this.state, password})}
+            value={this.state.password}
             password={true}
             placeholder="密码"
           />
         </View>
         <View style={styles.signin}>
-          <Text
-            onPress={() => {this.doLogin()}}
-            style={styles.signinText}
-          >
-            SIGN IN
-          </Text>
+          <TouchableOpacity onPress={() => {this.doLogin()}}>
+            <Text style={styles.signinText}>
+              SIGN IN
+            </Text>
+          </TouchableOpacity>
         </View>
       </View>
     );

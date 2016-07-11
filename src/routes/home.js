@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     marginTop: Platform.OS === 'android' ? 54 : 64
   },
   table: {
-    marginTop: 8,
+    marginTop: 4,
     backgroundColor: '#FFF'
   },
   border: {
