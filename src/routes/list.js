@@ -37,7 +37,9 @@ export default class List extends React.Component {
       pickerFlag: false,
       versionName: 'GITADORA',
       version: 'gd',
-      record: dataNGD.record
+      start: 0,
+      end: 20,
+      record: dataNGD.record.slice(0, 20)
     };
   }
   showPicker(pickerFlag, version, versionName) {
@@ -68,15 +70,22 @@ export default class List extends React.Component {
         break;
     }
     this.setState({
+      ...this.state,
       pickerFlag: pickerFlag,
       versionName: versionName,
       version: version,
-      record: record
+      record: record.slice(0, 20)
     });
+  }
+  scroll(e) {
+    console.log(e);
   }
   render() {
     return (
-      <ScrollView style={styles.container}>
+      <ScrollView
+        style={styles.container}
+        onScroll={(e) => {this.scroll(e)}}
+        scrollEventThrottle={50}>
         <GSRSelector
           pickerFlag={this.state.pickerFlag}
           versionName={this.state.versionName}

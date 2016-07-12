@@ -78,6 +78,15 @@ export default class Profile extends React.Component {
             <Text>关于</Text>
           </TouchableOpacity>
         </View>
+
+        <View style={styles.main}>
+          <TouchableOpacity
+            onPress={Actions.profile_setting}
+            style={styles.mainLine}
+          >
+            <Text>退出</Text>
+          </TouchableOpacity>
+        </View>
       </ScrollView>
     );
   }
