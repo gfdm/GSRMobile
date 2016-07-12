@@ -14,14 +14,13 @@ export default class Home extends React.Component {
       <ScrollView style={styles.container}>
         <View style={styles.table}>
           <View style={styles.row}>
-            <Text style={styles.cell}>Version</Text>
+            <Text style={styles.cell}>GITADORA Tri-Bootst</Text>
           </View>
-          <View style={styles.border}></View>
           <View style={styles.row}>
-            <Text style={styles.cell}>Skill</Text>
-            <Text style={styles.cell}>Total</Text>
-            <Text style={styles.cell}>new</Text>
-            <Text style={styles.cell}>old</Text>
+            <Text style={styles.cell}>SKILL</Text>
+            <Text style={styles.cell}>TOTAL</Text>
+            <Text style={styles.cell}>NEW</Text>
+            <Text style={styles.cell}>OLD</Text>
           </View>
           <View style={styles.border}></View>
           <View style={styles.subrow}>
@@ -34,15 +33,14 @@ export default class Home extends React.Component {
 
         <View style={styles.table}>
           <View style={styles.row}>
-            <Text style={styles.cell}>Version</Text>
+            <Text style={styles.cell}>Guitarfreaks & Drummania V8</Text>
           </View>
-          <View style={styles.border}></View>
           <View style={styles.row}>
-            <Text style={styles.cell}>Skill</Text>
-            <Text style={styles.cell}>Total</Text>
-            <Text style={styles.cell}>new</Text>
-            <Text style={styles.cell}>old</Text>
-            <Text style={styles.cell}>long</Text>
+            <Text style={styles.cell}>SKILL</Text>
+            <Text style={styles.cell}>TOTAL</Text>
+            <Text style={styles.cell}>NEW</Text>
+            <Text style={styles.cell}>OLD</Text>
+            <Text style={styles.cell}>LONG</Text>
           </View>
           <View style={styles.border}></View>
           <View style={styles.subrow}>
@@ -73,13 +71,13 @@ const styles = StyleSheet.create({
     borderBottomColor: '#EFEFEF'
   },
   row: {
-    height: 28,
+    height: 32,
     backgroundColor: '#FFF',
     flexDirection: 'row',
     alignItems: 'center'
   },
   subrow: {
-    height: 32,
+    height: 36,
     flexDirection: 'row',
     alignItems: 'center'
   },

@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#EFEFEF'
   },
   mainLine: {
-    height: 36,
+    height: 42,
     paddingLeft: 16,
     justifyContent: 'center'
   }

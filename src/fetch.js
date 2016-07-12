@@ -1,4 +1,4 @@
-export default function Fetch(url='', data = {}, success, method='GET') {
+export default function Fetch(url='', data = {}, success, method = 'GET') {
   let req = null;
   if (method.toUpperCase() === 'POST') {
     req = fetch(url, {
@@ -16,6 +16,8 @@ export default function Fetch(url='', data = {}, success, method='GET') {
     let data = JSON.parse(responseText);
     if (data.status) {
       success(data.data);
+    } else if (data.versionType) {
+      success(data);
     }
   }).catch((error) => {
     console.warn(error);
