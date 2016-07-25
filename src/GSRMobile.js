@@ -24,14 +24,15 @@ export default class GSRMobile extends React.Component {
       authFlag: false
     };
     Storage.load({
-      key: 'uid',
-      autoSync: true,
-      syncInBackground: true
+      key: 'uid'
     }).then(data => {
       this.setState({
         authFlag: !!data.uid
       });
     }).catch(err => {
+      this.setState({
+        authFlag: false
+      });
     });
   }
   doLogin(authFlag) {

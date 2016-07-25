@@ -1,3 +1,6 @@
+import { Actions } from 'react-native-router-flux';
+import Storage from './storage';
+
 export default function Fetch(url='', data = {}, success, method = 'GET') {
   let req = null;
   if (method.toUpperCase() === 'POST') {
@@ -21,5 +24,9 @@ export default function Fetch(url='', data = {}, success, method = 'GET') {
     }
   }).catch((error) => {
     console.warn(error);
+    Storage.remove({
+    	key: 'uid'
+    });
+    Actions.root();
   });
 };
