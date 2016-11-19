@@ -1,2 +1,3 @@
-# GSRMobile
-GITADORA SKILL RECORDER Mobile project
+# GITADORA SKILL RECORD 5 Legato -Web Side-
+
+> New generation of GITADORA SKILL RECORDER
