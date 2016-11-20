@@ -1,12 +1,7 @@
-require('webpack')
-require('weex-loader')
-
-var path = require('path')
+const entry = require('./utils').entry
 
 module.exports = {
-  entry: {
-    main: path.join(__dirname, 'src', 'weex-bootstrap.we?entry=true')
-  },
+  entry: entry,
   output: {
     path: 'dist',
     filename: '[name].js'

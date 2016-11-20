@@ -2723,6 +2723,10 @@ webpack@^1.13.1:
     watchpack "^0.2.1"
     webpack-core "~0.6.0"
 
+weex-components@^0.2.0:
+  version "0.2.0"
+  resolved "http://registry.npm.taobao.org/weex-components/download/weex-components-0.2.0.tgz#73cb41f88e2e1ceed86d95d1f5db4b0a213cfd53"
+
 weex-html5@^0.4.1:
   version "0.4.1"
   resolved "http://registry.npm.taobao.org/weex-html5/download/weex-html5-0.4.1.tgz#85c8f820ae217ec9550c359ffe6e6757bf22db57"
