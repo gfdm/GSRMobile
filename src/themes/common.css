@@ -1,0 +1,15 @@
+html, body, #app {
+  height: 100%;
+  font-size: 16px;
+  user-select: none;
+}
+
+h1, h2, h3, h4, h5, h6, button, input {
+  color: inherit;
+}
+
+button, input {
+  &:focus {
+    outline: 0;
+  }
+}

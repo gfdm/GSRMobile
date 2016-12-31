@@ -1,0 +1,64 @@
+.gsr-home {
+  height: 100%;
+  color: #FFF;
+  background: #253039;
+  background: linear-gradient(225deg, #253039, #465965);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  & .gsr-home--login {
+    width: 100%;
+    & h1 {
+      margin: -3rem auto 3rem auto;
+      text-align: center;
+    }
+    & .gsr-home--input {
+      width: 100%;
+      margin-bottom: 2rem;
+      text-align: center;
+      & div {
+        position: relative;
+        width: 100%;
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & i {
+          position: absolute;
+          left: 12%;
+          font-size: 1.4rem;
+        }
+        & input {
+          width: 78%;
+          padding-left: 2rem;
+          background: transparent;
+          border: 0;
+          border-bottom: 1px solid #657480;
+          box-sizing: border-box;
+        }
+      }
+    }
+    & .gsr-home--button {
+      padding: 0 12%;
+      text-align: right;
+      & button {
+        font-size: 1.2rem;
+        background: transparent;
+        border: 0;
+      }
+    }
+  }
+  & .gsr-home--info {
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+  & .text-gradient {
+    background-image: -webkit-gradient(linear, 14 0, 0 bottom, from(#5D98FC), to(#A899FA));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
