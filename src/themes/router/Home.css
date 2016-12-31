@@ -44,6 +44,8 @@
       padding: 0 12%;
       text-align: right;
       & button {
+        margin: -.4rem;
+        padding: .4rem;
         font-size: 1.2rem;
         background: transparent;
         border: 0;

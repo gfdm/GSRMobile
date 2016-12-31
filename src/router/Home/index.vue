@@ -5,15 +5,15 @@
       <div class="gsr-home--input">
         <div>
           <i class="fa fa-user text-gradient" aria-hidden="true"></i>
-          <input type="text" />
+          <input type="text" v-model="user.username" />
         </div>
         <div>
           <i class="fa fa-key text-gradient" aria-hidden="true"></i>
-          <input type="password" />
+          <input type="password" v-model="user.password" />
         </div>
       </div>
       <div class="gsr-home--button">
-        <button>
+        <button @click="handleLogin">
           <span class="text-gradient">LOGIN</span>
         </button>
       </div>
@@ -31,12 +31,18 @@
   export default {
     data () {
       return {
-        APP_VERSION
+        APP_VERSION,
+        user: {
+          username: '',
+          password: ''
+        }
       }
     },
-    components: {
-    },
     methods: {
+      handleLogin () {
+        console.log(this.user)
+        this.$router.push('/dashboard')
+      }
     }
   }
 </script>
