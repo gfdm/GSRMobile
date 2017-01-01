@@ -4,11 +4,11 @@
       <h1>GITADORA SKILL RECORDER</h1>
       <div class="gsr-home--input">
         <div>
-          <i class="fa fa-user text-gradient" aria-hidden="true"></i>
+          <i class="text-gradient iconfont icon-user"></i>
           <input type="text" v-model="user.username" />
         </div>
         <div>
-          <i class="fa fa-key text-gradient" aria-hidden="true"></i>
+          <i class="text-gradient iconfont icon-key"></i>
           <input type="password" v-model="user.password" />
         </div>
       </div>

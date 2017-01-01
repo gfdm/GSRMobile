@@ -1,0 +1,7 @@
+.gsr-layout {
+  height: 100%;
+  background: #F6F8FB;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

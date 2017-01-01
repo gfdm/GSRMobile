@@ -10,7 +10,6 @@
   },
   "author": "Jikkai Xiao <sonne@asaki.me>",
   "dependencies": {
-    "font-awesome": "^4.7.0",
     "typo.css": "^2.1.2",
     "vue": "latest",
     "vue-mui": "^2.0.0",
