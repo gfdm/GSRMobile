@@ -1,7 +1,7 @@
 <template>
   <gsr-layout>
     <div>
-      Dashboard
+      Record
     </div>
   </gsr-layout>
 </template>

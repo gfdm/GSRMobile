@@ -1,7 +1,7 @@
 <template>
   <gsr-layout>
     <div>
-      Dashboard
+      Settings
     </div>
   </gsr-layout>
 </template>

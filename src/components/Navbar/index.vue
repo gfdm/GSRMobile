@@ -2,16 +2,24 @@
   <nav class="gsr-navbar">
     <ul>
       <li>
-        <router-link to="/">1</router-link>
+        <router-link to="/dashboard">
+          <i class="iconfont icon-dashboard"></i>
+        </router-link>
       </li>
       <li>
-        <router-link to="/">2</router-link>
+        <router-link to="/record">
+          <i class="iconfont icon-create"></i>
+        </router-link>
       </li>
       <li>
-        <router-link to="/">3</router-link>
+        <router-link to="/list">
+          <i class="iconfont icon-musicnote"></i>
+        </router-link>
       </li>
       <li>
-        <router-link to="/">4</router-link>
+        <router-link to="/settings">
+          <i class="iconfont icon-settings"></i>
+        </router-link>
       </li>
     </ul>
   </nav>
@@ -33,8 +41,13 @@
         flex: 1;
         display: block;
         & a {
+          color: #5D98FC;
           text-align: center;
           display: block;
+          &.router-link-active {
+            color: #FFF;
+            background: #5D98FC;
+          }
         }
       }
     }
