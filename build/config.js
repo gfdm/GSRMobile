@@ -4,6 +4,7 @@ module.exports = {
   port: '3001',
   title: 'GITADORA SKILL RECORDER',
   vendor: [
+    'axios',
     'vue',
     'vue-router'
   ],

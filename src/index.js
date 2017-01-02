@@ -11,4 +11,8 @@ const app = new Vue({
 
 app.$mount('#app')
 
+window.addEventListener('contextmenu', (e) => {
+  e.preventDefault()
+})
+
 export { app }

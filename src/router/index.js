@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import Home from './Home'
 import Dashboard from './Dashboard'
 import Record from './Record'
+import RecordDisplay from './Record/display'
 import List from './List'
 import Settings from './Settings'
 
@@ -26,6 +27,11 @@ export default new Router({
       name: 'Record',
       path: '/record',
       component: Record
+    },
+    {
+      name: 'RecordDisplay',
+      path: '/record/:version',
+      component: RecordDisplay
     },
     {
       name: 'List',

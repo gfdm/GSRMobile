@@ -10,9 +10,10 @@
   },
   "author": "Jikkai Xiao <sonne@asaki.me>",
   "dependencies": {
+    "axios": "^0.15.3",
+    "svelte-flat": "^0.0.8",
     "typo.css": "^2.1.2",
     "vue": "latest",
-    "vue-mui": "^2.0.0",
     "vue-router": "latest"
   },
   "devDependencies": {
@@ -32,6 +33,7 @@
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.24.1",
+    "http-proxy": "^1.16.2",
     "postcss-cssnext": "^2.9.0",
     "postcss-loader": "^1.2.1",
     "progress-bar-webpack-plugin": "^1.9.1",

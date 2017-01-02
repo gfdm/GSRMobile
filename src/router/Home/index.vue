@@ -26,7 +26,10 @@
 </template>
 
 <script>
+  import { Message } from 'svelte-flat'
+
   import { APP_VERSION } from 'root/lib/config'
+  import { doLogin } from 'root/lib/action'
 
   export default {
     data () {
@@ -40,8 +43,14 @@
     },
     methods: {
       handleLogin () {
-        console.log(this.user)
-        this.$router.push('/dashboard')
+        doLogin(this.user).then((data) => {
+          const { status, msg } = data.data
+          if (status === 0) {
+            Message({ content: msg, status: 'danger' })
+          } else {
+            this.$router.push('/dashboard')
+          }
+        })
       }
     }
   }
