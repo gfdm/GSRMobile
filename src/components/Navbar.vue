@@ -12,14 +12,20 @@
         </router-link>
       </li>
       <li>
-        <router-link to="/list">
+        <a disabled>
           <i class="iconfont icon-musicnote"></i>
-        </router-link>
+        </a>
+        <!--<router-link to="/list">
+          <i class="iconfont icon-musicnote"></i>
+        </router-link>-->
       </li>
       <li>
-        <router-link to="/settings">
+        <a disabled>
           <i class="iconfont icon-settings"></i>
-        </router-link>
+        </a>
+        <!--<router-link to="/settings">
+          <i class="iconfont icon-settings"></i>
+        </router-link>-->
       </li>
     </ul>
   </nav>
@@ -47,6 +53,10 @@
           &.router-link-active {
             color: #FFF;
             background: #5D98FC;
+          }
+          &[disabled] {
+            color: #A899FA;
+            background: #EFEFEF;
           }
 
           & i {

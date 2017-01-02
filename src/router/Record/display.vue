@@ -10,7 +10,11 @@
         </section>
       </gsr-card>
       
-      <div class="gsr-record-list" v-for="(version, index) in result.versionGroup">
+      <div 
+        class="gsr-record-list"
+        v-for="(version, index) in result.versionGroup"
+        v-if="result.dataSource[index === 0 ? 'new' : 'old'].length > 0"
+      >
         <h3 :id="version">{{ version }}</h3>
         <div>
           <gsr-card v-for="item in result.dataSource[index === 0 ? 'new' : 'old']">
@@ -28,6 +32,8 @@
         </div>
       </div>
     </gsr-tab-panel>
+
+    <gsr-float-button :path="$route.fullPath + '/edit'" />
   </gsr-layout>
 </template>
 
@@ -35,7 +41,7 @@
   import { Message } from 'svelte-flat'
 
   import Layout from '../Layout'
-  import { Card, TabPanel } from 'root/components'
+  import { Card, FloatButton, TabPanel } from 'root/components'
   import { getResult } from 'root/lib/action'
 
   export default {
@@ -76,6 +82,7 @@
     },
     components: {
       GsrCard: Card,
+      GsrFloatButton: FloatButton,
       GsrLayout: Layout,
       GsrTabPanel: TabPanel
     }
