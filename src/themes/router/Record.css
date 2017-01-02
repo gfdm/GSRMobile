@@ -36,7 +36,7 @@
 }
 
 .gsr-record-single {
-  padding: 1rem;
+  padding: .5rem 1rem;
   padding-left: 3rem;
   white-space: nowrap;
   display: flex;
@@ -66,6 +66,6 @@
   & .skill,
   & .style,
   & .rank {
-    width: 33%;
+    flex: 1;
   }
 }
