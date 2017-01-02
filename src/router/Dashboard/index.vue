@@ -1,5 +1,5 @@
 <template>
-  <gsr-layout>
+  <gsr-layout class="gsr-dashboard">
     <gsr-card v-for="item in notice">
       <header>
         <h2>{{ item.title }}</h2>

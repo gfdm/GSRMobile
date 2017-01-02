@@ -48,6 +48,10 @@
             color: #FFF;
             background: #5D98FC;
           }
+
+          & i {
+            font-size: 1.5rem;
+          }
         }
       }
     }

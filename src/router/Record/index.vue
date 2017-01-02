@@ -1,9 +1,10 @@
 <template>
-  <gsr-layout>
+  <gsr-layout class="gsr-record">
     <template v-for="item in version">
-      <router-link :to="item.link">
+      <router-link :to="'record/' + item.link">
         <gsr-card>
           <h2>{{ item.title }}</h2>
+          <h3>{{ item.link.toUpperCase() }}</h3>
         </gsr-card>
       </router-link>
     </template

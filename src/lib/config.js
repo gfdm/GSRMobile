@@ -1,31 +1,31 @@
 const version = [
   {
     title: 'GITADORA Tri-Boost',
-    link: '/gdtb'
+    link: 'gdtb'
   },
   {
     title: 'GITADORA',
-    link: '/gdtb'
+    link: 'gd'
   },
   {
     title: 'GF & DM XG2',
-    link: '/xg2'
+    link: 'xg2'
   },
   {
     title: 'GF & DM XG',
-    link: '/xg'
+    link: 'xg'
   },
   {
     title: 'GF & DM V7',
-    link: '/v7'
+    link: 'v7'
   },
   {
     title: 'GF & DM V6',
-    link: '/v6'
+    link: 'v6'
   },
   {
     title: 'GF & DM V5',
-    link: '/v5'
+    link: 'v5'
   }
 ]
 

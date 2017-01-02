@@ -1,8 +1,8 @@
 <template>
-  <gsr-layout>
-    <div>
-      List
-    </div>
+  <gsr-layout class="gsr-list">
+    <h1>
+      开发中……
+    </h1>
   </gsr-layout>
 </template>
 

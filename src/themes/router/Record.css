@@ -1,0 +1,14 @@
+.gsr-record {
+  & h3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding: 0 1rem;
+    color: #EFEFEF;
+    font-size: 2rem;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+  }
+}

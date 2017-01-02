@@ -9,6 +9,7 @@
 
 <style>
   .gsr-card {
+    position: relative;
     margin: 1rem;
     padding: 1rem;
     background: #FFF;
