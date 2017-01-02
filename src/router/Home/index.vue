@@ -43,8 +43,8 @@
     },
     methods: {
       handleLogin () {
-        doLogin(this.user).then((data) => {
-          const { status, msg } = data.data
+        doLogin(this.user).then((resp) => {
+          const { msg, status } = resp.data
           if (status === 0) {
             Message({ content: msg, status: 'danger' })
           } else {

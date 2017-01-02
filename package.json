@@ -9,6 +9,7 @@
     "dev": "node build/server.js"
   },
   "author": "Jikkai Xiao <sonne@asaki.me>",
+  "license": "GPL-3.0",
   "dependencies": {
     "axios": "^0.15.3",
     "svelte-flat": "^0.0.8",
@@ -24,7 +25,7 @@
     "css-loader": "^0.26.1",
     "eslint": "^3.12.2",
     "eslint-config-standard": "^6.2.1",
-    "eslint-friendly-formatter": "^2.0.6",
+    "eslint-friendly-formatter": "^2.0.7",
     "eslint-loader": "^1.6.1",
     "eslint-plugin-html": "^1.7.0",
     "eslint-plugin-promise": "^3.4.0",
