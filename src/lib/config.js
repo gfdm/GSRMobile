@@ -15,18 +15,18 @@ const version = [
     title: 'GF & DM XG',
     link: 'xg'
   },
-  {
-    title: 'GF & DM V7',
-    link: 'v7'
-  },
-  {
-    title: 'GF & DM V6',
-    link: 'v6'
-  },
-  {
-    title: 'GF & DM V5',
-    link: 'v5'
-  }
+  // {
+  //   title: 'GF & DM V7',
+  //   link: 'v7'
+  // },
+  // {
+  //   title: 'GF & DM V6',
+  //   link: 'v6'
+  // },
+  // {
+  //   title: 'GF & DM V5',
+  //   link: 'v5'
+  // }
 ]
 
 export { APP_VERSION, version }

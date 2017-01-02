@@ -12,3 +12,60 @@
     align-items: center;
   }
 }
+
+.gsr-record-skill {
+  display: flex;
+  & span {
+    flex: 1;
+    &:first-child {
+      flex: 1.5;
+    }
+  }
+}
+
+.gsr-record-list {
+  & >div {
+    margin-bottom: 4rem;
+  }
+  & .gsr-card {
+    padding: 0;
+  }
+  & h3 {
+    margin: 0 1rem;
+  }
+}
+
+.gsr-record-single {
+  padding: 1rem;
+  padding-left: 3rem;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: wrap;
+  & .order {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3rem;
+    height: 100%;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  & .title {
+    width: 40%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  & .difficulty {
+    width: 35%;
+  }
+  & .rating {
+    width: 25%;
+  }
+  & .skill,
+  & .style,
+  & .rank {
+    width: 33%;
+  }
+}

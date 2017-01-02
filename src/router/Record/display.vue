@@ -1,16 +1,32 @@
 <template>
-  <gsr-layout class="gsr-record">
+  <gsr-layout class="gsr-record-display">
     <gsr-tab-panel :tab="tab">
-      <section slot="dm">
-        {{ result.title }}<br />
-        {{ result.versionGroup }}<br />
-        {{ result.colmuns }}<br />
-        {{ result.dataSource.new }}<br />
-        {{ result.dataSource.old }}
-      </section>
-      <section slot="gf">
-        {{ result }}
-      </section>
+      <gsr-card>
+        <section class="gsr-record-skill">
+          <span>{{ result.skill.username }}</span>
+          <span>{{ result.skill.skill }}</span>
+          <span>{{ result.skill.old }}</span>
+          <span>{{ result.skill.new }}</span>
+        </section>
+      </gsr-card>
+      
+      <div class="gsr-record-list" v-for="(version, index) in result.versionGroup">
+        <h3 :id="version">{{ version }}</h3>
+        <div>
+          <gsr-card v-for="item in result.dataSource[index === 0 ? 'new' : 'old']">
+            <section class="gsr-record-single" :class="item.class">
+              <template 
+                v-for="columns in result.columns" 
+                v-if="!~['update', 'comment'].indexOf(columns.dataIndex)"
+              >
+                <div :class="columns.dataIndex">
+                  {{ item[columns.dataIndex] || '-' }}
+                </div>
+              </template>
+            </section>
+          </gsr-card>
+        </div>
+      </div>
     </gsr-tab-panel>
   </gsr-layout>
 </template>
@@ -26,7 +42,7 @@
     data () {
       return {
         tab: { name: 'dm' },
-        result: {}
+        result: { dataSource: {}, skill: {} }
       }
     },
     created () {

@@ -18,8 +18,7 @@
     </header>
 
     <div class="gsr-panel--body">
-      <slot name="dm" v-if="tab.name === 'dm'"></slot>
-      <slot name="gf" v-if="tab.name === 'gf'"></slot>
+      <slot></slot>
     </div>
   </div>
 </template>

@@ -33,3 +33,32 @@ button, input {
     font-size: 12px;
   }
 }
+
+.nov {
+  color: #026;
+  background: #9DF;
+}
+.reg {
+  color: #440;
+  background: #FFC;
+}
+.exp {
+  color: #600;
+  background: #FCC;
+}
+.mas {
+  color: #306;
+  background: #99F;
+}
+.bsc {
+  color: #009100;
+  background: #CFC;
+}
+.adv {
+  color: #CA7400;
+  background: #FFC;
+}
+.ext {
+  color: #FF3737;
+  background: #FCC;
+}
