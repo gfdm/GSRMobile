@@ -8,4 +8,8 @@ const getResult = (version, gd) => {
   return axios.get(`/api/v1/skill/target/${version}/${gd}`)
 }
 
-export { doLogin, getResult }
+const getMusic = (version) => {
+  return axios.get(`/api/v1/music/${version}`)
+}
+
+export { doLogin, getResult, getMusic }

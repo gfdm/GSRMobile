@@ -71,11 +71,13 @@
 
         getResult(version, gd).then((resp) => {
           const { data, msg, status } = resp.data
-          if (status === 0) {
-            Message({ content: msg, status: 'danger' })
-          } else {
-            console.log(data)
+
+          if (status === 1) {
             this.result = data
+          } else if (status === 0) {
+            Message({ content: msg, status: 'danger' })
+          } else if (status === -1) {
+            this.$router.push('/')
           }
         })
       }

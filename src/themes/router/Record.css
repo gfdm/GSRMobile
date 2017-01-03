@@ -69,3 +69,9 @@
     flex: 1;
   }
 }
+
+.gsr-record-music {
+  & h3 {
+    margin: 0 1rem;
+  }
+}
