@@ -6,6 +6,7 @@ import Dashboard from './Dashboard'
 import Record from './Record'
 import RecordDisplay from './Record/display'
 import RecordMusic from './Record/music'
+import RecordEdit from './Record/edit'
 import List from './List'
 import Settings from './Settings'
 
@@ -38,6 +39,11 @@ export default new Router({
       name: 'RecordMusic',
       path: '/record/:version/edit',
       component: RecordMusic
+    },
+    {
+      name: 'RecordEdit',
+      path: '/record/:version/edit/:id',
+      component: RecordEdit
     },
     {
       name: 'List',

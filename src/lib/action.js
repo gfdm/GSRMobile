@@ -12,4 +12,12 @@ const getMusic = (version) => {
   return axios.get(`/api/v1/music/${version}`)
 }
 
-export { doLogin, getResult, getMusic }
+const getSingleMusic = (version, id) => {
+  return axios.get(`/api/v1/music/single/${version}/${id}`)
+}
+
+const getRecord = (version, mid, no) => {
+  return axios.get(`/api/v1/record/${version}/${mid}/${no}`)
+}
+
+export { doLogin, getResult, getMusic, getSingleMusic, getRecord }

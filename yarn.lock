@@ -4237,9 +4237,9 @@ supports-color@^3.1.0, supports-color@^3.1.2:
   dependencies:
     has-flag "^1.0.0"
 
-svelte-flat@^0.0.8:
-  version "0.0.8"
-  resolved "http://registry.npm.taobao.org/svelte-flat/download/svelte-flat-0.0.8.tgz#a5919adddcb01b266cafbf593f41fac3a1287976"
+svelte-flat@^0.0.9:
+  version "0.0.9"
+  resolved "http://registry.npm.taobao.org/svelte-flat/download/svelte-flat-0.0.9.tgz#5654acaa1ab9a40001c9bf6a1bbdc69dcb4537e3"
 
 svgo@^0.7.0:
   version "0.7.1"
