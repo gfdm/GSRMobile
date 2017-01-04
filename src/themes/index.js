@@ -1,7 +1,7 @@
 import 'typo.css/typo.css'
 
-import 'svelte-flat/packages/theme-default/dist/icon.css'
-import 'svelte-flat/packages/theme-default/dist/message.css'
+import 'svelte-flat/lib/theme-default/icon.css'
+import 'svelte-flat/lib/theme-default/message.css'
 
 import './common.css'
 import './fonts/iconfont.css'

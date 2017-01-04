@@ -12,7 +12,7 @@
   "license": "GPL-3.0",
   "dependencies": {
     "axios": "^0.15.3",
-    "svelte-flat": "^0.0.9",
+    "svelte-flat": "^0.1.1",
     "typo.css": "^2.1.2",
     "vue": "latest",
     "vue-router": "latest"
@@ -33,11 +33,11 @@
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "file-loader": "^0.9.0",
-    "html-webpack-plugin": "^2.24.1",
+    "html-webpack-plugin": "^2.26.0",
     "http-proxy": "^1.16.2",
     "postcss-cssnext": "^2.9.0",
     "postcss-loader": "^1.2.1",
-    "progress-bar-webpack-plugin": "^1.9.1",
+    "progress-bar-webpack-plugin": "^1.9.2",
     "rimraf": "^2.5.4",
     "style-loader": "^0.13.1",
     "vue-loader": "latest",

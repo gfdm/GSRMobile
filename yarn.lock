@@ -854,7 +854,7 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-bluebird@^3.0.5, bluebird@^3.1.1, bluebird@^3.4.6:
+bluebird@^3.0.5, bluebird@^3.1.1, bluebird@^3.4.7:
   version "3.4.7"
   resolved "http://registry.npm.taobao.org/bluebird/download/bluebird-3.4.7.tgz#f72d760be09b7f76d08ed8fae98b289a8d05fab3"
 
@@ -2214,9 +2214,9 @@ html-entities@^1.2.0:
   version "1.2.0"
   resolved "http://registry.npm.taobao.org/html-entities/download/html-entities-1.2.0.tgz#41948caf85ce82fed36e4e6a0ed371a6664379e2"
 
-html-minifier@^3.1.0:
+html-minifier@^3.2.3:
   version "3.2.3"
-  resolved "http://registry.npm.taobao.org/html-minifier/download/html-minifier-3.2.3.tgz#d2ff536e24d95726c332493d8f77d84dbed85372"
+  resolved "https://registry.yarnpkg.com/html-minifier/-/html-minifier-3.2.3.tgz#d2ff536e24d95726c332493d8f77d84dbed85372"
   dependencies:
     camel-case "3.0.x"
     clean-css "3.4.x"
@@ -2227,14 +2227,14 @@ html-minifier@^3.1.0:
     relateurl "0.2.x"
     uglify-js "2.7.x"
 
-html-webpack-plugin@^2.24.1:
-  version "2.25.0"
-  resolved "http://registry.npm.taobao.org/html-webpack-plugin/download/html-webpack-plugin-2.25.0.tgz#945c860c9bf413d725a09f773d09cfeca72e8f8a"
+html-webpack-plugin@^2.26.0:
+  version "2.26.0"
+  resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-2.26.0.tgz#ba97c8a66f912b85df80d2aeea65966c8bd9249e"
   dependencies:
-    bluebird "^3.4.6"
-    html-minifier "^3.1.0"
+    bluebird "^3.4.7"
+    html-minifier "^3.2.3"
     loader-utils "^0.2.16"
-    lodash "^4.16.4"
+    lodash "^4.17.3"
     pretty-error "^2.0.2"
     toposort "^1.0.0"
 
@@ -2683,7 +2683,7 @@ lodash.uniq@^4.3.0:
   version "4.5.0"
   resolved "http://registry.npm.taobao.org/lodash.uniq/download/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
-lodash@^4.0.0, lodash@^4.14.0, lodash@^4.16.4, lodash@^4.2.0, lodash@^4.3.0:
+lodash@^4.0.0, lodash@^4.14.0, lodash@^4.17.3, lodash@^4.2.0, lodash@^4.3.0:
   version "4.17.3"
   resolved "http://registry.npm.taobao.org/lodash/download/lodash-4.17.3.tgz#557ed7d2a9438cac5fd5a43043ca60cb455e01f7"
 
@@ -3644,9 +3644,9 @@ process@^0.11.0:
   version "0.11.9"
   resolved "http://registry.npm.taobao.org/process/download/process-0.11.9.tgz#7bd5ad21aa6253e7da8682264f1e11d11c0318c1"
 
-progress-bar-webpack-plugin@^1.9.1:
-  version "1.9.1"
-  resolved "http://registry.npm.taobao.org/progress-bar-webpack-plugin/download/progress-bar-webpack-plugin-1.9.1.tgz#8cf81ed655c64b31a9c58b6441a1c2d23c5afb21"
+progress-bar-webpack-plugin@^1.9.2:
+  version "1.9.2"
+  resolved "https://registry.yarnpkg.com/progress-bar-webpack-plugin/-/progress-bar-webpack-plugin-1.9.2.tgz#a8bf30e2d27991c90e39137df10ab1d58931e31d"
   dependencies:
     chalk "^1.1.1"
     object.assign "^4.0.1"
@@ -4237,9 +4237,9 @@ supports-color@^3.1.0, supports-color@^3.1.2:
   dependencies:
     has-flag "^1.0.0"
 
-svelte-flat@^0.0.9:
-  version "0.0.9"
-  resolved "http://registry.npm.taobao.org/svelte-flat/download/svelte-flat-0.0.9.tgz#5654acaa1ab9a40001c9bf6a1bbdc69dcb4537e3"
+svelte-flat@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/svelte-flat/-/svelte-flat-0.1.1.tgz#16988b8cb73a8903be449996249785e81ea18829"
 
 svgo@^0.7.0:
   version "0.7.1"
