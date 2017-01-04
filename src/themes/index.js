@@ -1,3 +1,5 @@
+import 'typo.css/typo.css'
+
 import './common.css'
 import './fonts/iconfont.css'
 

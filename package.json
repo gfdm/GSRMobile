@@ -12,14 +12,15 @@
   "license": "GPL-3.0",
   "dependencies": {
     "axios": "^0.15.3",
-    "svelte-flat": "^0.1.2",
+    "svelte-flat": "^0.1.4",
+    "typo.css": "^2.1.2",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
     "babel-loader": "^6.2.10",
-    "babel-plugin-component": "^0.8.0",
+    "babel-plugin-svelteflat": "^0.1.0",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-stage-0": "^6.16.0",
     "css-loader": "^0.26.1",

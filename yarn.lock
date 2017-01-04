@@ -388,9 +388,9 @@ babel-plugin-check-es2015-constants@^6.3.13:
   dependencies:
     babel-runtime "^6.0.0"
 
-babel-plugin-component@^0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-component/-/babel-plugin-component-0.8.0.tgz#933b5010f9d3bead8c3b5eb9fdb5aa2594ac7d7b"
+babel-plugin-svelteflat@^0.1.0:
+  version "0.1.0"
+  resolved "http://registry.npm.taobao.org/babel-plugin-svelteflat/download/babel-plugin-svelteflat-0.1.0.tgz#b5d2f5f12eed6bed38f38e18961f554a24a5046b"
 
 babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
@@ -4241,9 +4241,9 @@ supports-color@^3.1.0, supports-color@^3.1.2:
   dependencies:
     has-flag "^1.0.0"
 
-svelte-flat@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/svelte-flat/-/svelte-flat-0.1.2.tgz#2d146daf15c26a1c82aa78df2113db4689a0e47b"
+svelte-flat@^0.1.4:
+  version "0.1.4"
+  resolved "http://registry.npm.taobao.org/svelte-flat/download/svelte-flat-0.1.4.tgz#0118af36ee79a3e9d8817be34b40949c0e497999"
 
 svgo@^0.7.0:
   version "0.7.1"
@@ -4357,6 +4357,10 @@ type-is@~1.6.13:
 typedarray@^0.0.6:
   version "0.0.6"
   resolved "http://registry.npm.taobao.org/typedarray/download/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
+
+typo.css@^2.1.2:
+  version "2.1.2"
+  resolved "http://registry.npm.taobao.org/typo.css/download/typo.css-2.1.2.tgz#1b5abf3c01b7a34ec648e53168958d1e9f574b74"
 
 uglify-js@2.7.x, uglify-js@^2.7.5:
   version "2.7.5"

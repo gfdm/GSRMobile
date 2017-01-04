@@ -1,8 +1,12 @@
 {
   "presets": ["es2015", "stage-0"],
   "plugins": [
-    ["component", [
-      { "libraryName": "svelte-flat", "styleLibraryName": "theme-default" }
+    ["svelteflat", [
+      { 
+        "libraryName": "svelte-flat",
+        "styleLibraryName": "theme-default", 
+        "typoCss": false
+      }
     ]]
   ]
 }
