@@ -13,7 +13,6 @@
   "dependencies": {
     "axios": "^0.15.3",
     "svelte-flat": "^0.1.2",
-    "typo.css": "^2.1.2",
     "vue": "latest",
     "vue-router": "latest"
   },

@@ -1,12 +1,19 @@
 html, body, #app {
   height: 100%;
   font-size: 14px;
+  font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans;
   user-select: none;
   overflow: hidden;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
 h1, h2, h3, h4, h5, h6, button, input {
   color: inherit;
+  font-weight: 300;
+  font-family: inherit;
 }
 
 a {
