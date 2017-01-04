@@ -388,6 +388,10 @@ babel-plugin-check-es2015-constants@^6.3.13:
   dependencies:
     babel-runtime "^6.0.0"
 
+babel-plugin-component@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-component/-/babel-plugin-component-0.8.0.tgz#933b5010f9d3bead8c3b5eb9fdb5aa2594ac7d7b"
+
 babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
   resolved "http://registry.npm.taobao.org/babel-plugin-syntax-async-functions/download/babel-plugin-syntax-async-functions-6.13.0.tgz#cad9cad1191b5ad634bf30ae0872391e0647be95"
@@ -4237,9 +4241,9 @@ supports-color@^3.1.0, supports-color@^3.1.2:
   dependencies:
     has-flag "^1.0.0"
 
-svelte-flat@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/svelte-flat/-/svelte-flat-0.1.1.tgz#16988b8cb73a8903be449996249785e81ea18829"
+svelte-flat@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/svelte-flat/-/svelte-flat-0.1.2.tgz#2d146daf15c26a1c82aa78df2113db4689a0e47b"
 
 svgo@^0.7.0:
   version "0.7.1"
@@ -4537,9 +4541,9 @@ webpack-dev-middleware@^1.9.0:
     path-is-absolute "^1.0.0"
     range-parser "^1.0.3"
 
-webpack-hot-middleware@^2.14.0:
-  version "2.14.0"
-  resolved "http://registry.npm.taobao.org/webpack-hot-middleware/download/webpack-hot-middleware-2.14.0.tgz#64bb8cf056ba84c699d148840ae77e54179abb6d"
+webpack-hot-middleware@^2.15.0:
+  version "2.15.0"
+  resolved "https://registry.yarnpkg.com/webpack-hot-middleware/-/webpack-hot-middleware-2.15.0.tgz#71995af7c0025f109df482f86f1e10379526d026"
   dependencies:
     ansi-html "0.0.6"
     html-entities "^1.2.0"
