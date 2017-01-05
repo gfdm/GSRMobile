@@ -76,3 +76,9 @@
     margin: 0 1rem;
   }
 }
+
+.gsr-record-edit {
+  & .mint-popup-bottom {
+    width: 100%;
+  }
+}
