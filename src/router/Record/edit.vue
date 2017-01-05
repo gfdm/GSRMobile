@@ -17,6 +17,12 @@
     <!-- 备注 -->
     <mt-field label="备注" v-model="result.comment" />
 
+    <div class="gsr-record-edit--button">
+      <mt-button type="primary" size="large" @click.native="handleSubmit">
+        保存
+      </mt-button>
+    </div>
+
     <!-- 难易度选择 -->
     <mt-popup v-model="popup.difficulty" position="bottom">
       <mt-picker :slots="picker.difficulty" @change="onDifficultyChange">
@@ -30,7 +36,7 @@
 
 <script>
   import { Message } from 'svelte-flat'
-  import { Cell, Field, Picker, Popup, Switch } from 'mint-ui'
+  import { Button, Cell, Field, Picker, Popup, Switch } from 'mint-ui'
 
   import Layout from '../Layout'
   import { getSingleMusic, getRecord } from 'root/lib/action'
@@ -103,6 +109,10 @@
         })
       },
 
+      handleSubmit () {
+        console.log(this.result)
+      },
+
       openPicker (attr) {
         this.popup[attr] = true
       },
@@ -150,6 +160,7 @@
     },
     components: {
       GsrLayout: Layout,
+      MtButton: Button,
       MtCell: Cell,
       MtField: Field,
       MtPicker: Picker,

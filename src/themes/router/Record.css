@@ -82,3 +82,6 @@
     width: 100%;
   }
 }
+.gsr-record-edit--button {
+  padding: 1rem;
+}
