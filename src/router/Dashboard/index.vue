@@ -20,8 +20,8 @@
         notice: [
           {
             title: 'Hello GSRM',
-            date: '2017-01-02',
-            content: 'hello world!'
+            date: '2017-01-06',
+            content: '基本功能已经可以使用，相关功能正在开发m(_ _)m!'
           }
         ]
       }

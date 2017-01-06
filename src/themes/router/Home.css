@@ -27,6 +27,7 @@
         align-items: center;
         & i {
           position: absolute;
+          top: -.5rem;
           left: 12%;
           font-size: 1.4rem;
         }

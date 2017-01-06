@@ -10,9 +10,9 @@ module.exports = {
     client: './src/index.js'
   },
   output: {
-    path: path.join(__dirname, '../dist'),
+    path: path.join(__dirname, '../dist/mobileassets'),
     filename: '[name].js',
-    publicPath: './'
+    publicPath: 'https://gsr.asaki.me/mobileassets/'
   },
   resolve: {
     extensions: ['.js', '.vue', '.css', '.json'],
@@ -50,7 +50,7 @@ module.exports = {
       title: config.title,
       template: __dirname + '/index.html',
       favicon: __dirname + '/favicon.ico',
-      filename: './index.html'
+      filename: '../index.html'
     })
   ]
 }
