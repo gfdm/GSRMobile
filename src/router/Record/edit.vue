@@ -18,7 +18,12 @@
     <mt-field label="备注" v-model="result.comment" />
 
     <div class="gsr-record-edit--button">
-      <mt-button type="primary" size="large" @click.native="handleSubmit">
+      <mt-button 
+        type="primary" 
+        size="large" 
+        @click.native="handleSubmit" 
+        :disabled="button.disabled"
+      >
         保存
       </mt-button>
     </div>
@@ -39,7 +44,8 @@
   import { Button, Cell, Field, Picker, Popup, Switch } from 'mint-ui'
 
   import Layout from '../Layout'
-  import { getSingleMusic, getRecord } from 'root/lib/action'
+  import { getSingleMusic, getRecord, saveRecord } from 'root/lib/action'
+  import Utils from 'root/lib/utils'
 
   export default {
     data () {
@@ -55,6 +61,9 @@
         },
         cell: {
           style: false
+        },
+        button: {
+          disabled: true
         },
         popup: {
           difficulty: false,
@@ -76,6 +85,31 @@
       const { version, id } = this.$route.params
       this.handleRecord(version, id)
     },
+    watch: {
+      result: {
+        handler (value) {
+          const { difficulty, rating } = value
+          let disabled = false
+
+          if (difficulty === '' || rating === '') {
+            disabled = true
+          }
+
+          if (rating < 0 || rating > 100) {
+            disabled = true
+          }
+
+          if (String(rating).indexOf('.') >= 0) {
+            if (String(rating).split('.')[1].length > 2) {
+              disabled = true
+            }
+          }
+
+          this.button.disabled = disabled
+        },
+        deep: true
+      }
+    },
     methods: {
       handleRecord (version, id) {
         getSingleMusic(version, id).then((resp) => {
@@ -95,7 +129,7 @@
           const mid = data.id
           const no = data.type === 'new' ? '1' : '2'
 
-          return getRecord(version, mid, no).then((resp) => {
+          getRecord(version, mid, no).then((resp) => {
             const { data, msg, status } = resp.data
 
             if (status === 1) {
@@ -110,7 +144,33 @@
       },
 
       handleSubmit () {
-        console.log(this.result)
+        const { result, music, $route } = this
+
+        const record = {
+          version: $route.params.version,
+          gd: /-D/.test(result.difficulty) ? '1' : '2',
+          mid: music.id,
+          no: music.type === 'new' ? '1' : '2',
+          rank: Utils.formatRank(result.rating, result.fc),
+          levelName: result.difficulty.toLowerCase(),
+          rating: `${result.rating}%`,
+          skill: Utils.formatSkill(music[result.difficulty.toLowerCase()], result.rating),
+          style: Utils.formatStyle(result.style),
+          comment: result.comment
+        }
+
+        saveRecord(record).then((resp) => {
+          const { msg, status } = resp.data
+
+          if (status === 1) {
+            const { version } = this.$route.params
+            this.$router.push(`/record/${version}`)
+          } else if (status === 0) {
+            Message({ content: msg, status: 'danger' })
+          } else if (status === -1) {
+            this.$router.push('/')
+          }
+        })
       },
 
       openPicker (attr) {

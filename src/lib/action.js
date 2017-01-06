@@ -20,4 +20,8 @@ const getRecord = (version, mid, no) => {
   return axios.get(`/api/v1/record/${version}/${mid}/${no}`)
 }
 
-export { doLogin, getResult, getMusic, getSingleMusic, getRecord }
+const saveRecord = (params) => {
+  return axios.put(`/api/v1/record`, { record: params })
+}
+
+export { doLogin, getResult, getMusic, getSingleMusic, getRecord, saveRecord }
