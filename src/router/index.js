@@ -13,7 +13,7 @@ import Settings from './Settings'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  mode: 'hash',
   routes: [
     {
       name: 'Home',
