@@ -35,7 +35,6 @@
         const { data, msg, status } = resp.data
 
         if (status === 1) {
-          console.log(data)
           this.music = data
         } else if (status === 0) {
           Message({ content: msg, status: 'danger' })

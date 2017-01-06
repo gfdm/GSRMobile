@@ -1,21 +1,14 @@
-# gsr-next-mobile
+# GITADORA SKILL RECORD 5 Arpège -Mobile Side-
 
-To start:
+> New generation of GITADORA SKILL RECORDER
 
+## Development
 ```bash
-$ npm install
+# install packages -> run webpack -> build project
+$ yarn
+$ yarn run dev
+$ yarn run build
 ```
 
-To develop:
-
-```bash
-$ npm run dev
-```
-
-
-
-To build for production:
-
-```bash
-$ npm run build
-```
+## LICENSE
+GPL-3.0

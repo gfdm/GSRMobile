@@ -39,7 +39,6 @@ Utils.formatRank = (rating, fc) => {
 }
 
 Utils.formatSkill = (difficulty, rating) => {
-  console.log(difficulty, rating)
   return (Math.floor(Number(difficulty * rating * 20)) / 100).toFixed(2)
 }
 
