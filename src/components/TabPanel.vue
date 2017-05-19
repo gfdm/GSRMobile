@@ -57,6 +57,7 @@
       max-height: calc(100% - 3rem);
       flex: 1;
       overflow: auto;
+      -webkit-overflow-scrolling: touch;
     }
   }
 </style>

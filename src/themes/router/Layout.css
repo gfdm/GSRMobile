@@ -8,6 +8,7 @@
   & .gsr-layout--body {
     max-height: calc(100% - 3rem);
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
     flex: 1;
   }
 }
