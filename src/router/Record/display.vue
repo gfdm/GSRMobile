@@ -5,8 +5,8 @@
         <section class="gsr-record-skill">
           <span>{{ result.skill.username }}</span>
           <span>{{ result.skill.skill }}</span>
-          <span>{{ result.skill.old }}</span>
           <span>{{ result.skill.new }}</span>
+          <span>{{ result.skill.old }}</span>
         </section>
       </gsr-card>
       

@@ -40,8 +40,7 @@
   padding: .5rem 1rem;
   padding-left: 3rem;
   white-space: nowrap;
-  display: flex;
-  flex-wrap: wrap;
+  overflow: auto;
   & .order {
     position: absolute;
     top: 0;
@@ -54,20 +53,24 @@
     align-items: center;
   }
   & .title {
-    width: 40%;
+    width: 65%;
     text-overflow: ellipsis;
     overflow: hidden;
+    float: left;
   }
   & .difficulty {
     width: 35%;
+    float: right;
   }
   & .rating {
     width: 25%;
+    float: left;
   }
   & .skill,
   & .style,
   & .rank {
-    flex: 1;
+    width: 25%;
+    float: left;
   }
 }
 
