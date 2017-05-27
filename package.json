@@ -16,7 +16,8 @@
     "svelte-flat": "^0.1.5",
     "typo.css": "^2.1.2",
     "vue": "latest",
-    "vue-router": "latest"
+    "vue-router": "latest",
+    "vue-scroller": "^2.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",

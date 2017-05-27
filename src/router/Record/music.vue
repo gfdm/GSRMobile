@@ -1,18 +1,20 @@
 <template>
   <gsr-layout class="gsr-record-music">
-    <!--<gsr-search />-->
+    <gsr-search v-model="searchText" />
 
-    <div v-for="(version, index) in music.versionGroup">
-      <h3>{{ version }}</h3>
-      <router-link 
-        v-for="item in music.dataSource[index === 0 ? 'new' : 'old']"
-        :to="$route.fullPath + '/' + item._id"
-      >
-        <gsr-card>
-          {{ item.title }}
-        </gsr-card>
-      </router-link>
-    </div>
+    <scroller class="gsr-record-music-scroller" :height="height">
+      <div v-for="(version, index) in list.versionGroup">
+        <h3>{{ version }}</h3>
+        <router-link 
+          v-for="item in list.dataSource[index === 0 ? 'new' : 'old']"
+          :to="$route.fullPath + '/' + item._id"
+        >
+          <gsr-card>
+            {{ item.title }}
+          </gsr-card>
+        </router-link>
+      </div>
+    </scroller>
   </gsr-layout>
 </template>
 <script>
@@ -25,7 +27,25 @@
   export default {
     data () {
       return {
-        music: {}
+        searchText: '',
+        height: '',
+        music: {},
+        list: {}
+      }
+    },
+    watch: {
+      searchText () {
+        const list = JSON.parse(JSON.stringify(this.music))
+
+        if (this.searchText) {
+          for (let key in list.dataSource) {
+            list.dataSource[key] = list.dataSource[key].filter((item) => {
+              return ~item.title.toLowerCase().indexOf(this.searchText.toLowerCase())
+            })
+          }
+        }
+
+        this.list = list
       }
     },
     created () {
@@ -36,12 +56,15 @@
 
         if (status === 1) {
           this.music = data
+          this.list = data
         } else if (status === 0) {
           Message({ content: msg, status: 'danger' })
         } else if (status === -1) {
           this.$router.push('/')
         }
       })
+
+      this.height = (document.body.clientHeight - 110).toString()
     },
     components: {
       GsrCard: Card,

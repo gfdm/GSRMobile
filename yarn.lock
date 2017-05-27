@@ -4533,6 +4533,12 @@ vue-router@latest:
   version "2.1.1"
   resolved "http://registry.npm.taobao.org/vue-router/download/vue-router-2.1.1.tgz#10c31bbdcb6da92bd3e0223fa12345e73018625a"
 
+vue-scroller@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.npmjs.org/vue-scroller/-/vue-scroller-2.2.0.tgz#4bf70ae14a25b543e779ab20c9daed6ffc549753"
+  dependencies:
+    vue "^2.2.6"
+
 vue-style-loader@^1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/vue-style-loader/download/vue-style-loader-1.0.0.tgz#abeb7bd0f46313083741244d3079d4f14449e049"
@@ -4549,6 +4555,10 @@ vue-template-compiler@latest:
 vue-template-es2015-compiler@^1.2.2:
   version "1.4.2"
   resolved "http://registry.npm.taobao.org/vue-template-es2015-compiler/download/vue-template-es2015-compiler-1.4.2.tgz#0bc595cda68fc27779568926fcead13553a335df"
+
+vue@^2.2.6:
+  version "2.3.3"
+  resolved "https://registry.npmjs.org/vue/-/vue-2.3.3.tgz#d1eaa8fde5240735a4563e74f2c7fead9cbb064c"
 
 vue@latest:
   version "2.1.8"

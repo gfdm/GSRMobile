@@ -6,7 +6,8 @@ module.exports = {
   vendor: [
     'axios',
     'vue',
-    'vue-router'
+    'vue-router',
+    'vue-scroller'
   ],
   postcss: [
     require('postcss-cssnext')({
